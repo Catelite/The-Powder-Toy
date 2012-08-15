@@ -293,6 +293,39 @@ void update_air(void)
 					break;
 				case 4: //No Update
 					break;
+				case 5: //High Energy
+					dx = (dx * 1.001f);
+					dy = (dy * 1.001f);
+					dp = (dp * 1.003f);
+					break;
+				case 6: //Low Energy	
+					dx = (dx * 0.950f);
+					dy = (dy * 0.950f);
+					dp = (dp * 0.950f);
+					break;
+				case 7: //Troll
+					if (1>rand()%1000000)
+					{
+						if (1>rand()%2)						
+						{
+							dp = 2500.0f;
+							dx = (-100.0f + (rand()%200));
+							dy = (-100.0f + (rand()%200));
+						}
+						else
+						{
+							dp = -2500.0f;
+							dx = (-100.0f + (rand()%200));
+							dy = (-100.0f + (rand()%200));
+						}
+					}
+
+					//if (1>rand()%2)
+							
+					//dx = (dx * 1.990f);
+					//dy = (dy * 1.990f);
+					
+					break;
 				}
 
 				ovx[y][x] = dx;

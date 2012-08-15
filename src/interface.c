@@ -7032,8 +7032,8 @@ void simulation_ui(pixel * vid_buf)
 	ui_checkbox cb5;
 	ui_checkbox cb6;
 	ui_checkbox cb7;
-	char * airModeList[] = {"On", "Pressure Off", "Velocity Off", "Off", "No Update"};
-	int airModeListCount = 5;
+	char * airModeList[] = {"On", "Pressure Off", "Velocity Off", "Off", "No Update", "High Energy", "Low Energy", "Troll"};
+	int airModeListCount = 8;
 	char * gravityModeList[] = {"Vertical", "Off", "Radial"};
 	int gravityModeListCount = 3;
 	ui_list list;
@@ -7184,7 +7184,7 @@ void simulation_ui(pixel * vid_buf)
 	aheat_enable = cb5.checked;
 	new_scale = (cb3.checked)?2:1;
 	new_kiosk = (cb4.checked)?1:0;
-	if(list.selected>=0 && list.selected<=4)
+	if(list.selected>=0 && list.selected<=7)
 		airMode = list.selected;
 	if(list2.selected>=0 && list2.selected<=2)
 		gravityMode = list2.selected;

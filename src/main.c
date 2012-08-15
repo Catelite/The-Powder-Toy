@@ -1618,6 +1618,15 @@ int main(int argc, char *argv[])
 				case 4:
 					strcpy(itc_msg, "Air: No Update");
 					break;
+				case 5:
+					strcpy(itc_msg, "Air: High Energy");
+					break;
+				case 6:
+					strcpy(itc_msg, "Air: Low Energy");
+					break;
+				case 7:
+					strcpy(itc_msg, "Air: Troll");
+					break;
 				}
 			}
 
